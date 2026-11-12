@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure SWA Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f0f2f5; }
+    header { background: #0078d4; color: white; padding: 16px 24px; font-size: 22px; font-weight: bold; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px; }
+    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .card h3 { color: #555; font-size: 14px; margin-bottom: 8px; }
+    .card .value { font-size: 32px; font-weight: bold; color: #0078d4; }
+    .card .change { font-size: 12px; color: #107c10; margin-top: 4px; }
+    .table-wrap { margin: 0 24px; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    th { background: #0078d4; color: white; padding: 12px; text-align: left; }
+    td { padding: 12px; border-bottom: 1px solid #eee; }
+    tr:last-child td { border-bottom: none; }
+    .badge { padding: 2px 8px; border-radius: 12px; font-size: 12px; }
+    .active { background: #dff6dd; color: #107c10; }
+    .pending { background: #fff4ce; color: #835c00; }
+  </style>
+</head>
+<body>
+
+  <header>Azure SWA Dashboard</header>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Total Users</h3>
+      <div class="value">1,284</div>
+      <div class="change">↑ 12% this month</div>
+    </div>
+    <div class="card">
+      <h3>Deployments</h3>
+      <div class="value">47</div>
+      <div class="change">↑ 3 today</div>
+    </div>
+    <div class="card">
+      <h3>Uptime</h3>
+      <div class="value">99.9%</div>
+      <div class="change">Last 30 days</div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>App</th><th>Region</th><th>Last Deploy</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>my-swa-app</td><td>East US</td><td>2025-07-10</td><td><span class="badge active">Active</span></td></tr>
+        <tr><td>api-backend</td><td>West Europe</td><td>2025-07-09</td><td><span class="badge active">Active</span></td></tr>
+        <tr><td>staging-app</td><td>East US</td><td>2025-07-08</td><td><span class="badge pending">Pending</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
